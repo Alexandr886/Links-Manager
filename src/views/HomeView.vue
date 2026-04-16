@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <h1 class="p-6">Hello</h1>
+    <h1 class="p-6">Главная страница</h1>
   </main>
 </template>
