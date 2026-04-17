@@ -1,0 +1,41 @@
+<script setup>
+import { ref } from 'vue'
+import InputText from 'primevue/inputtext'
+import Password from 'primevue/password'
+import Button from 'primevue/button'
+
+const formData = ref({
+  email: '',
+  password: '',
+})
+</script>
+<template>
+  <form>
+    <div class="mb-3">
+      <InputText
+        type="text"
+        name="email"
+        placeholder="Введите e-mail"
+        v-model="formData.email"
+        class="w-full"
+      />
+    </div>
+
+    <div class="mb-3">
+      <InputText
+        type="password"
+        name="password"
+        placeholder="Введите пароль"
+        v-model="formData.password"
+        class="w-full"
+      />
+    </div>
+
+    <span class="mb-3 cursor-pointer block">Забыли пароль?</span>
+
+    <div class="grid grid-cols-2 gap-2">
+      <Button label="Вход" severity="success" />
+      <Button label="GitHub" severity="contrast" icon="pi pi-github" />
+    </div>
+  </form>
+</template>
