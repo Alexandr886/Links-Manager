@@ -6,6 +6,7 @@ import Tab from 'primevue/tab'
 import TabPanels from 'primevue/tabpanels'
 import TabPanel from 'primevue/tabpanel'
 import LoginForm from './LoginForm.vue'
+import RegistrationForm from './RegistrationForm.vue'
 
 const activeTab = ref('signin') // signin | signup | resetPassword
 </script>
@@ -20,7 +21,9 @@ const activeTab = ref('signin') // signin | signup | resetPassword
       <TabPanel value="signin">
         <LoginForm />
       </TabPanel>
-      <TabPanel value="signup"> Авторизация контент </TabPanel>
+      <TabPanel value="signup">
+        <RegistrationForm />
+      </TabPanel>
     </TabPanels>
   </Tabs>
 </template>

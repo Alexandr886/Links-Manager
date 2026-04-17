@@ -6,10 +6,21 @@ import Button from 'primevue/button'
 const formData = ref({
   email: '',
   password: '',
+  firstname: '',
 })
 </script>
 <template>
   <form>
+    <div class="mb-3">
+      <InputText
+        type="text"
+        name="firstname"
+        placeholder="Введите своё имя"
+        v-model="formData.firstname"
+        class="w-full"
+      />
+    </div>
+
     <div class="mb-3">
       <InputText
         type="text"
@@ -30,10 +41,8 @@ const formData = ref({
       />
     </div>
 
-    <span class="mb-3 cursor-pointer block">Забыли пароль?</span>
-
     <div class="grid grid-cols-2 gap-2">
-      <Button label="Вход" severity="success" />
+      <Button label="Регистрация" severity="success" />
       <Button label="GitHub" severity="contrast" icon="pi pi-github" />
     </div>
   </form>
