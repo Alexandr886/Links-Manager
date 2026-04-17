@@ -7,6 +7,8 @@ const formData = ref({
   email: '',
   password: '',
 })
+
+const emits = defineEmits(['resetPassword'])
 </script>
 <template>
   <form>
@@ -30,7 +32,7 @@ const formData = ref({
       />
     </div>
 
-    <span class="mb-3 cursor-pointer block">Забыли пароль?</span>
+    <span class="mb-3 cursor-pointer block" @click="emits('resetPassword')">Забыли пароль?</span>
 
     <div class="grid grid-cols-2 gap-2">
       <Button label="Вход" severity="success" />

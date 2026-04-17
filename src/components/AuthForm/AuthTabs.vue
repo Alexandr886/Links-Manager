@@ -20,12 +20,12 @@ const activeTab = ref('signin') // signin | signup | resetPassword
     </TabList>
     <TabPanels>
       <TabPanel value="signin">
-        <LoginForm />
+        <LoginForm @resetPassword="activeTab = 'resetPassword'" />
       </TabPanel>
       <TabPanel value="signup">
         <RegistrationForm />
       </TabPanel>
-      <TabPanel value="reset">
+      <TabPanel value="resetPassword">
         <ResetPasswordForm />
       </TabPanel>
     </TabPanels>
